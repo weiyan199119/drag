@@ -8,8 +8,8 @@ function drag(id){
 		disX=e.pageX-obj.offsetLeft;
 		disY=e.pageY-obj.offsetTop;
 		document.onmousemove=function(e){
-			obj.style.left=e.pageX-disX+'px'
-			obj.style.top=e.pageY-disX+'px'
+			obj.style.left=e.clientX-disX+'px'
+			obj.style.top=e.clientY-disX+'px'
 		}
 	}
 }
