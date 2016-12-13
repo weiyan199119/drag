@@ -3,9 +3,13 @@ function drag(id){
 	var obj=document.getElementById(id)
 	var disX=0;
 	var disY=0;
-	var s=0;
-	obj.onmousedown=function(){	
-		var a=12;
-		var b=1;	
+	
+	obj.onmousedown=function(e){	
+		disX=e.pageX-obj.offsetLeft;
+		disY=e.pageY-obj.offsetTop;
+		document.onmousemove=function(e){
+			obj.style.left=e.pageX-disX+'px'
+			obj.style.top=e.pageY-disX+'px'
+		}
 	}
 }
