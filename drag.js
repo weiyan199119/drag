@@ -13,5 +13,11 @@ function drag(id){
 			obj.style.top=e.pageY-disX+'px'
 
 		}
+		document.onmouseup=function(e){
+			document.onmousemove=null;
+			document.onmouseup=null;
+
+		}
 	}
+	return false;
 }
